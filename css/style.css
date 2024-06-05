@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Header */
+.custom-navbar {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-navbar .navbar-brand img {
+    width: 100px;
+    height: auto;
+}
+
+.custom-navbar .navbar-nav .nav-item {
+    margin-left: 20px;
+}
+
+.custom-navbar .navbar-nav .nav-link {
+    color: #00788C;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover {
+    color: #ffffff;
+    background-color: #00788C;
+    border-radius: 5px;
+}
+
+.custom-navbar .navbar-nav .nav-link.active {
+    color: #ffffff;
+    background-color: #005f6b;
+    border-radius: 5px;
+}
+
+.custom-navbar .navbar-toggler {
+    border: none;
+}
+
+.custom-navbar .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Banner */
+.Banner {
+    background:  url('img/hero-img.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.Banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.Banner .container {
+    position: relative;
+    z-index: 2;
+}
+
+.Banner-h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.Banner-p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.banner-btn {
+    background-color: #00788C;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.banner-btn:hover {
+    background-color: #005f6b;
+    transform: scale(1.05);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Welcome Section */
+.welcome {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.wel-row {
+    align-items: center;
+}
+
+.wel-h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #00788C;
+}
+
+.wel-p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.wel-img-container {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.wel-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.wel-img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Last Banner */
+.last-b {
+    background-color: #00788C;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.last-b::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 120, 140, 0.8) 0%, rgba(0, 120, 140, 0.5) 100%);
+    z-index: -1;
+}
+
+.last-b .container {
+    position: relative;
+    z-index: 2;
+}
+
+.lst-h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.lst-p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.lst-btn {
+    background-color: #fff;
+    color: #00788C;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.lst-btn:hover {
+    background-color: #f8f9fa;
+    color: #005f6b;
+}
+
+/* Animation */
+@keyframes scaleInOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.lst-btn {
+    animation: scaleInOut 1.5s infinite ease-in-out;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-base {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-img {
+    max-width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #00788C;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+}
+
+.contact-info ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info ul li a:hover {
+    color: #00788C;
+}
+
+.hr-line {
+    border-top: 1px solid #555;
+    margin: 20px 0;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #ccc;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #00788C;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .Banner-h1 {
+        font-size: 2.5rem;
+    }
+
+    .Banner-p {
+        font-size: 1.25rem;
+    }
+
+    .wel-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wel-h1 {
+        font-size: 1.5rem;
+    }
+
+    .wel-p {
+        font-size: 0.875rem;
+    }
+
+    .lst-h2 {
+        font-size: 1.5rem;
+    }
+
+    .lst-p {
+        font-size: 0.875rem;
+    }
+
+    .lst-btn {
+        font-size: 0.875rem;
+    }
+}
